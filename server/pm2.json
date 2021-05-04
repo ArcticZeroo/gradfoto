@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name": "Gradfoto Server",
+      "script": "./dist/index.js",
+      "watch": false,
+      "ignore_watch": ["node_modules"],
+      "env":{
+        "NODE_ENV": "production"
+      },
+      "env_dev":{
+        "NODE_ENV": "dev"
+      }
+    }
+  ]
+}
