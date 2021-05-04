@@ -116,6 +116,12 @@ nav .subtitle {
     outline: none;
     border: none;
     cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+#data-input button:disabled {
+    background: #999;
+    cursor: not-allowed;
 }
 
 #data-input .label .subtitle {
