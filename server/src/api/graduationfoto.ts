@@ -94,7 +94,10 @@ export class GraduationfotoSession {
     }
 
     async open() {
-        this.browser = await puppeteer.launch();
+        this.browser = await puppeteer.launch({
+            // I really don't like this. TODO: Resolve by making myself not root on VPS
+            args: ['--no-sandbox']
+        });
         this.page = await this.browser.newPage();
         await this.page.goto(baseUrl, defaultWaitOptions);
     }
