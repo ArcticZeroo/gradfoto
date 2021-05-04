@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gradfoto Puller</title>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+    <script src="../dist/bundle.js" type="module"></script>
+</head>
+<body>
+<nav>
+    <div class="title">
+        Gradfoto Puller
+    </div>
+    <div class="subtitle">
+        The solution to gradfoto asking for $50 to get access to pictures you should have gotten for free after paying
+        your university countless amounts of money over your education
+        <br/>
+        You'll just need your customer number, and your last name.
+        <br/>
+        It doesn't gracefully handle failed forms, so try to avoid that.
+    </div>
+</nav>
+<div>
+    <form id="data-input" class="card">
+        <div class="param">
+            <div class="label">
+                <label for="customer-number">
+                    Your customer number:
+                </label>
+                <div class="subtitle">
+                    This is the number you were sent by Gradfoto by text or email. Typically, it is 7 digits long.
+                </div>
+            </div>
+            <input placeholder="Customer number" id="customer-number"/>
+        </div>
+        <div class="param">
+            <div class="label">
+                <label for="last-name">
+                    Your last name:
+                </label>
+                <div class="subtitle">
+                    If your last name is less than 3 characters, the remainder will automatically be replaced with
+                    spaces.
+                    <br/>
+                    If you enter a name longer than 3 characters, only the first 3 characters will be used.
+                </div>
+            </div>
+            <input placeholder="Last name" id="last-name"/>
+        </div>
+        <div>
+            <button type="button" id="retrieve-self">
+                Retrieve My Photos
+            </button>
+            <button type="button" id="retrieve-candids">
+                Retrieve My Photos + Candid Photos
+            </button>
+        </div>
+    </form>
+</div>
+<div id="results">
+
+</div>
+<footer>
+    Your information is never stored.
+    <br/>
+    Any usage stats tracked do not use identifiers in any way.
+</footer>
+</body>
+</html>

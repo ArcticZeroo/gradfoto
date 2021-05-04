@@ -1,0 +1,146 @@
+/*
+Begin Reset CSS
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+End Reset CSS
+*/
+
+body {
+    padding: 1rem;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background: #212121;
+    color: #FAFAFA;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+nav .title {
+    color: #2196F3;
+    font-size: 1.5em;
+    margin-bottom: 0.25rem;
+}
+
+nav .subtitle {
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FAFAFA;
+    color: #212121;
+    border: 0.125rem solid #212121;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+#data-input {
+    margin-bottom: 1rem;
+}
+
+#data-input > div.param {
+    width: 100%;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#data-input input {
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    border: 0.125rem solid #DDD;
+    outline: none;
+}
+
+#data-input > div:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+#data-input button {
+    background: #2196F3;
+    color: #FAFAFA;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+#data-input .label .subtitle {
+    color: #999;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#results .grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
