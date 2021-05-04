@@ -50,13 +50,20 @@ table {
 End Reset CSS
 */
 
-body {
-    padding: 1rem;
+html, body {
+    height: 100%;
+    width: 100%;
     box-sizing: border-box;
+}
+
+body {
+    font-size: 1em;
+    padding: 1rem;
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     align-content: center;
+    justify-content: space-between;
     background: #212121;
     color: #FAFAFA;
 }
@@ -102,6 +109,8 @@ nav .subtitle {
     border-radius: 0.5rem;
     border: 0.125rem solid #DDD;
     outline: none;
+    min-height: 1rem;
+    box-sizing: border-box;
 }
 
 #data-input > div:not(:last-child) {
@@ -136,17 +145,49 @@ nav .subtitle {
 
 #results .grid {
     margin-top: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
+    font-size: 1em;
     width: 100%;
     display: flex;
     justify-content: center;
     text-align: center;
     padding: 1rem;
+    box-sizing: border-box;
+}
+
+#data-input .buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+    #data-input > div.param {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #data-input > div.param .label {
+        margin-bottom: 0.5rem;
+    }
+
+    #data-input > div.param input {
+        width: 100%;
+    }
+
+    #data-input .buttons {
+        flex-direction: column;
+    }
+
+    #data-input .buttons > *:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
 }

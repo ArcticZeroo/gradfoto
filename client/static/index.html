@@ -5,6 +5,7 @@
     <title>Gradfoto Puller</title>
     <link rel="stylesheet" type="text/css" href="index.css"/>
     <script src="bundle.js" type="module"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <nav>
@@ -14,9 +15,11 @@
     <div class="subtitle">
         The solution to gradfoto asking for $50 for a picture download after we've paid thousands to the university.
         <br/>
-        You'll just need your customer number, and your last name.
-        <br/>
         It doesn't gracefully handle failed forms, so try to avoid that.
+        <br/>
+        Note that the pictures you will see are entirely unedited -- If you were to purchase photos, Gradfoto may
+        perform additional edits to things like the contrast and white balance, and sells additional packages for
+        touch-ups.
     </div>
 </nav>
 <div>
@@ -30,7 +33,7 @@
                     This is the number you were sent by Gradfoto by text or email. Typically, it is 7 digits long.
                 </div>
             </div>
-            <input placeholder="Customer number" id="customer-number"/>
+            <input placeholder="Customer number" id="customer-number" autocomplete="yes"/>
         </div>
         <div class="param">
             <div class="label">
@@ -46,7 +49,7 @@
             </div>
             <input placeholder="Last name" id="last-name"/>
         </div>
-        <div>
+        <div class="buttons">
             <button type="button" id="retrieve-self">
                 Retrieve My Photos
             </button>
